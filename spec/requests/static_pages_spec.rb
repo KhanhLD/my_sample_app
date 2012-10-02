@@ -39,5 +39,18 @@ describe "Static pages" do
 			visit '/static_pages/about'
 			page.should have_selector('title',:text => " | Information")
 		end
-  end  
+  end
+
+	describe "Contact page" do
+		
+		it "should have the h1 'Servant Skill'" do
+			visit '/static_pages/about'
+			page.should have_selector('h1',:text => "Servant Skill")
+		end
+
+		it "should have the title 'Skill'" do
+			visit '/static_pages/about'
+			page.should have_selector('title',:text => " | Skill")
+		end
+	end
 end
