@@ -70,10 +70,10 @@ describe "User Pages" do
 
 		describe "valid information" do
 			before do
-				fill_in "Name", 				with: "Example user"
-				fill_in "Email", 				with: "user@example.com"
-				fill_in "Password", 		with: "password"
-				fill_in "Confirmation", with: "password"
+				fill_in "Name", 						with: "Example user"
+				fill_in "Email", 						with: "user@example.com"
+				fill_in "Password", 				with: "password"
+				fill_in "Confirm Password", with: "password"
 			end
 			
 			it "should create a user" do
@@ -126,7 +126,7 @@ describe "User Pages" do
 				fill_in "Name", with: new_name
 				fill_in "Email", with: new_email
 				fill_in "Password", with: user.password
-				fill_in "Confirm password", with: user.password
+				fill_in "Confirm Password", with: user.password
 				click_button "Save changes"
 			end
 
