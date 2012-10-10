@@ -1,6 +1,6 @@
 <div class="center hero-unit">
-		<h1>Archer's Chant</h1>
-		<p>
+<h1>Archer's Chant</h1>
+<p>
 		  I am the bone of my sword<br>
 		  Steel is my body and fire is my blood<br>
 		  I have created over a thousand blades<br>
@@ -11,8 +11,10 @@
 		  Have withstood pain to create many weapons<br>
 		  Yet those hands will never hold anything<br>
 		  So, as I pray, Unlimited Blade Work<br>
-		</p>
+</p>
+<% if !signed_in? %>
 	<%= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary" %>
+<% end %>
 </div>
 
 <%= link_to "Rails", 'http://rubyonrails.org/' %>
