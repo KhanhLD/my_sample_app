@@ -1,20 +1,33 @@
-<div class="center hero-unit">
-<h1>Archer's Chant</h1>
-<p>
-		  I am the bone of my sword<br>
-		  Steel is my body and fire is my blood<br>
-		  I have created over a thousand blades<br>
-  
-		  Unknown to death<br>
-		  Nor known to life<br>
-  
-		  Have withstood pain to create many weapons<br>
-		  Yet those hands will never hold anything<br>
-		  So, as I pray, Unlimited Blade Work<br>
-</p>
-<% if !signed_in? %>
-	<%= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary" %>
-<% end %>
-</div>
 
-<%= link_to "Rails", 'http://rubyonrails.org/' %>
+<% if signed_in? %>
+	<div class="row">
+		<aside class="span4">
+			<section>
+				<%= render 'shared/user_info' %>
+			</section>
+			<section>
+				<%= render 'shared/micropost_form' %>
+			</section>
+		</aside>
+		<div class="span8">
+			<h3>Micropost Feed</h3>
+			<%= render 'shared/feed' %>
+		</div>
+	</div>
+<% else %>
+	<div class="center hero-unit">
+		<p>
+			I am the bone of my sword<br>
+	  	Steel is my body and fire is my blood<br>
+	  	I have created over a thousand blades<br>
+  
+	  	Unknown to death<br>
+	  	Nor known to life<br>
+  
+	  	Have withstood pain to create many weapons<br>
+	  	Yet those hands will never hold anything<br>
+	  	So, as I pray, Unlimited Blade Work<br>
+		</p>
+		<%= link_to "Sign up now", signup_path, class: "btn btn-large btn-primary" %>
+	</div>
+<% end %>
